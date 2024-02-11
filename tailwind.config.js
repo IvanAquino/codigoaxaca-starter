@@ -1,9 +1,11 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
+import flowbite from 'flowbite/plugin';
 
 /** @type {import('tailwindcss').Config} */
 export default {
+    darkMode: 'class',
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './vendor/laravel/jetstream/**/*.blade.php',
@@ -16,8 +18,24 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                'background': '#f1f5f9',
+                'primary': {
+                    '50': '#eaf5ff',
+                    '100': '#d9ecff',
+                    '200': '#badbff',
+                    '300': '#91c1ff',
+                    '400': '#659bff',
+                    '500': '#4273ff',
+                    '600': '#2149ff',
+                    '700': '#183bec',
+                    '800': '#1533be',
+                    '900': '#1b3494',
+                    '950': '#101d56',
+                },
+            },
         },
     },
 
-    plugins: [forms, typography],
+    plugins: [forms, typography, flowbite],
 };
