@@ -17,6 +17,14 @@ window.toggleDarkMode = function () {
     }
 }
 
+// listen system theme changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    let darkMode = localStorage.getItem('darkMode');
+    if (darkMode === 'system' || darkMode === null) {
+        applySystemTheme();
+    }
+});
+
 document.addEventListener('DOMContentLoaded', (event) => {
     let darkMode = localStorage.getItem('darkMode');
 
