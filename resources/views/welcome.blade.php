@@ -16,9 +16,9 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans antialiased">
+<body class="dark font-sans antialiased">
     <div
-        class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] text-white">
+        class="min-h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] text-white">
 
         {{-- Navigation bar --}}
         <nav class="bg-transparent">
@@ -109,29 +109,6 @@
                     <div class="hidden lg:col-span-5 lg:mt-0 lg:flex">
                         <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
                             alt="mockup">
-                    </div>
-                </div>
-            </section>
-
-            <section class="mt-4 bg-transparent">
-                <div class="items-center gap-16 px-4 py-8 lg:grid lg:grid-cols-2 lg:px-6 lg:py-16">
-                    <div class="font-light text-gray-500 dark:text-gray-400 sm:text-lg">
-                        <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">We didn't
-                            reinvent the wheel</h2>
-                        <p class="mb-4">We are strategists, designers and developers. Innovators and problem solvers.
-                            Small enough to be simple and quick, but big enough to deliver the scope you want at the
-                            pace you need. Small enough to be simple and quick, but big enough to deliver the scope you
-                            want at the pace you need.</p>
-                        <p>We are strategists, designers and developers. Innovators and problem solvers. Small enough to
-                            be simple and quick.</p>
-                    </div>
-                    <div class="mt-8 grid grid-cols-2 gap-4">
-                        <img class="w-full rounded-lg"
-                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
-                            alt="office content 1">
-                        <img class="mt-4 w-full rounded-lg lg:mt-10"
-                            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
-                            alt="office content 2">
                     </div>
                 </div>
             </section>

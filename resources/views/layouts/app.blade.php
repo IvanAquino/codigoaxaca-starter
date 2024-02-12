@@ -89,22 +89,53 @@
 
                 <!-- Sub Navigation -->
                 <div class="w-full flex-none space-y-3 p-4">
-                    <a href="{{ route('profile.show') }}"
-                        class="group flex items-center gap-3 rounded-xl border border-transparent px-4 py-2.5 font-semibold text-slate-600 transition hover:bg-slate-100 active:border-slate-200 active:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-900/50 dark:active:border-slate-700/50 dark:active:text-slate-100">
+                    <button data-dropdown-toggle="user-dropdown"
+                        class="group flex w-full items-center gap-3 rounded-xl border border-transparent px-4 py-2.5 font-semibold text-slate-600 transition hover:bg-slate-100 active:border-slate-200 active:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-900/50 dark:active:border-slate-700/50 dark:active:text-slate-100">
                         <img src="{{ auth()->user()->profile_photo_url }}" alt="User Avatar"
                             class="inline-block h-10 w-10 rounded-full" />
-                        <div class="grow leading-5">
+                        <div class="grow text-left leading-5">
                             <span class="text-sm">
                                 {{ auth()->user()->name }}
                             </span>
                             {{-- <span class="text-xs font-medium opacity-75">@john.smith256</span> --}}
                         </div>
-                        <svg class="hi-solid hi-dots-horizontal inline-block h-5 w-5" fill="currentColor"
-                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M6 10a2 2 0 11-4 0 2 2 0 014 0zM12 10a2 2 0 11-4 0 2 2 0 014 0zM16 12a2 2 0 100-4 2 2 0 000 4z" />
+                        @svg('heroicon-o-ellipsis-horizontal', 'hi-solid hi-dots-horizontal inline-block h-5 w-5')
+                    </button>
+                    {{-- <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"
+                        class="inline-flex items-center rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        type="button">Dropdown button <svg class="ms-3 h-2.5 w-2.5" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 4 4 4-4" />
                         </svg>
-                    </a>
+                    </button> --}}
+
+                    <!-- Dropdown menu -->
+                    <div id="user-dropdown"
+                        class="z-10 hidden w-48 divide-y divide-gray-100 rounded-lg border border-gray-200 bg-white dark:border-none dark:bg-gray-700">
+                        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                            aria-labelledby="dropdownDefaultButton">
+                            {{-- <li>
+                                <a href="#"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                            </li> --}}
+                            <li>
+                                <a href="{{ route('profile.show') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    {{ __('Profile') }}
+                                </a>
+                            </li>
+                            <li>
+                                <form action="{{ route('logout') }}" method="POST">
+                                    @csrf
+                                    <button type="submit"
+                                        class="block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                                        {{ __('Log out') }}
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- END Sub Navigation -->
             </nav>
