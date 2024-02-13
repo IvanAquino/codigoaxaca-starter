@@ -24,6 +24,35 @@ This is a starter kit for [Laravel](https://laravel.com/) projects using [Jetstr
 <x-heroicon-o-moon class="hi-outline hi-moon hidden h-5 w-5 dark:inline-block" />
 ```
 
+## Main color
+
+It's simple to change main color, you just have to modify the tailwind config file `tailwind.config.js`.
+
+```js
+{
+    theme: {
+        extend: {
+            // ...
+            colors: {
+                'primary': {
+                    '50': '#eaf5ff',
+                    '100': '#d9ecff',
+                    '200': '#badbff',
+                    '300': '#91c1ff',
+                    '400': '#659bff',
+                    '500': '#4273ff',
+                    '600': '#2149ff',
+                    '700': '#183bec',
+                    '800': '#1533be',
+                    '900': '#1b3494',
+                    '950': '#101d56',
+                },
+            },
+        },
+    },
+}
+```
+
 ## Dashboard navigation
 
 To add a new entry to the dashboard's sidebar navigation, follow the steps outlined below. This process involves updating the `navigation` array located in your application's configuration file `config/dashboard.php`.
