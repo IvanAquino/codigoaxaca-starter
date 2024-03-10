@@ -1,5 +1,9 @@
 # Codigoaxaca Starter Kit
 
+We're moving this starter into a package
+
+[JetAdmin](https://github.com/IvanAquino/jet-admin)
+
 This is a starter kit for [Laravel](https://laravel.com/) projects using [Jetstream](https://jetstream.laravel.com/) with [Livewire](https://livewire.laravel.com) and [Flowbite](https://flowbite.com/).
 
 <p>
